@@ -1,0 +1,30 @@
+# Hype — core dependencies.
+# Minimum versions tested on Python 3.12.
+# macOS-specific packages (pyobjc) are isolated behind the KeyVault interface
+# so a Linux/cloud build (Phase 8) can omit them and swap the backend.
+
+pydantic>=2.13,<3          # config models + validation
+keyring>=25.7              # macOS Keychain storage backend
+tomli-w>=1.2               # write config.toml (stdlib tomllib is read-only)
+
+# --- data layer (Phase 2): Birdeye ranker + Helius live monitor ---
+requests>=2.31             # sync HTTP (Birdeye, Helius parse)
+websockets>=13             # Helius live wallet monitoring (logsSubscribe)
+aiohttp>=3.9               # async HTTP for the monitor's parse calls
+
+# --- Solana + trading ---
+solders>=0.28              # keypairs, pubkeys, versioned transactions
+base58>=2.1                # key / address encoding
+
+# --- desktop dashboard ---
+PyQt6>=6.11                # UI toolkit
+pyqtgraph>=0.14            # real-time equity curve
+numpy>=2.0                 # pyqtgraph dependency
+qrcode>=8.2                # funding-address QR code
+pillow>=12.0               # QR / icon rendering
+
+# --- packaging (optional) ---
+pyinstaller>=6.21          # build dist/Hype.app
+
+# --- macOS only (Touch ID / Keychain auth) ---
+pyobjc-framework-LocalAuthentication>=12.2 ; sys_platform == "darwin"
