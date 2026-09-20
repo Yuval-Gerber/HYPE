@@ -10,9 +10,23 @@ Telegram bot.
 
 ~14,000 lines of Python · asyncio + WebSockets · PyQt6 · SQLite · Solana / Jupiter
 
+![Performance tab — live equity curve with a marker on every buy and sell](docs/screenshots/performance.png)
+
 > Personal project. It trades the owner's own funds; it is not a product or
 > financial advice. Built paper-trading-first: the simulator and the live
 > executor share 100% of the strategy code.
+
+---
+
+## Screenshots
+
+| Traders — ranked copy list | Positions — open trades |
+|---|---|
+| ![Traders tab: followed wallets ranked by realized PnL, with auto-generated nicknames](docs/screenshots/traders.png) | ![Positions tab: open trades with live P&L, time held, and TP/SL](docs/screenshots/positions.png) |
+
+*Top: the Performance tab in live mode — equity curve with a marker for every
+buy and sell, plus win rate, best/worst trade, and fees. The colored dots in
+the sidebar are the per-service connection lights.*
 
 ---
 
