@@ -22,15 +22,6 @@ sidebar are the per-service connection lights.*
 
 ---
 
-## Screenshots
-
-![Traders tab: followed wallets ranked by realized PnL, with auto-generated nicknames](docs/screenshots/traders.png)
-
-*Traders tab — followed wallets ranked by realized PnL, each with an
-auto-generated nickname instead of a raw address.*
-
----
-
 ## How it works
 
 ```
